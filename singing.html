@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Emily Kubay Performances</title>
+    <title>Singing Performances</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -53,25 +53,46 @@
         background-color: #d9effc;
       }
 
-      .welcome-section {
+      .links-section {
         padding: 20px;
         background-color: rgba(240, 250, 255, 0.9);
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        margin-bottom: 20px;
       }
 
-      .welcome-section h1 {
-        font-size: 3rem; /* Larger font size for the title */
-        font-weight: 900; /* Bold font */
+      .links-section h2 {
+        font-size: 2.5rem; /* Large font size */
+        font-weight: 900; /* Bold text */
         color: #28587b; /* Highlight color */
-        margin-bottom: 20px; /* Space below the title */
+        text-align: center; /* Center alignment */
+        margin-bottom: 20px; /* Adds space below the title */
       }
 
-      .welcome-section p {
-        font-size: 1.2rem; /* Slightly larger paragraph text */
-        line-height: 1.8;
-        color: #333;
+      .links-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .links-section ul li {
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .links-section ul li a {
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #6fa3ef;
+        border-radius: 12px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .links-section ul li a:hover {
+        background-color: #a7c7ff;
+        transform: translateY(-5px);
       }
     </style>
   </head>
@@ -88,14 +109,19 @@
     </div>
 
     <div class="main-content">
-      <div class="welcome-section">
-        <h1>Welcome to Emily Kubay's Performances</h1>
-        <img src="images/1.jpg" alt="Emily Kubay picture" height="600" />
-        <p>
-          Emily Kubay, a hardworking 10-year-old girl who lives in Kent,
-          England, would like to show you all her performances in Music and
-          Drama and her beautiful artworks.
-        </p>
+      <div class="links-section">
+        <h2>Singing Performances</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=BgavM_Hz2mo"
+              target="_blank"
+              >Fall Leaves Fall by Emily Bronté</a
+            >
+          </li>
+          <!-- <li><a href="#">Performance 2</a></li> -->
+          <!-- <li><a href="#">Performance 3</a></li> -->
+        </ul>
       </div>
     </div>
   </body>
