@@ -51,49 +51,60 @@
         flex: 1;
         padding: 20px;
         background-color: #d9effc;
-      }
-
-      .art-section {
         display: flex;
-        gap: 20px; /* Space between the two columns */
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .art-images {
-        flex: 1; /* Occupy 50% of the space */
-      }
-
-      .art-images img {
-        width: 100%;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      .art-text {
-        flex: 1; /* Occupy 50% of the space */
+      /* Title Section */
+      .title-section {
+        text-align: center;
         padding: 20px;
-        background-color: rgba(240, 250, 255, 0.9);
+        background-color: #f0f8ff;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
-      .art-text h2 {
+      .title-section h1 {
         font-size: 2.5rem;
-        font-weight: 900;
+        font-weight: bold;
         color: #28587b;
-        text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
-      .art-text p {
+      .title-section p {
         font-size: 1.2rem;
         line-height: 1.8;
         color: #333;
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 2px solid #28587b; /* Add clear borders */
-        border-radius: 8px; /* Rounded corners for a softer look */
-        background-color: #f0f8ff; /* Light background inside each section */
+      }
+
+      /* Art Groups Section */
+      .art-group {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+        background-color: #f0f8ff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .art-group:nth-child(odd) {
+        flex-direction: row-reverse; /* Alternate image and text placement */
+      }
+
+      .art-group img {
+        width: 50%;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .art-group p {
+        flex: 1;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        margin: 0;
       }
     </style>
   </head>
@@ -110,31 +121,39 @@
     </div>
 
     <div class="main-content">
-      <div class="art-section">
-        <!-- Left Column: Images -->
-        <div class="art-images">
-          <img src="images/1.jpg" alt="Emily Kubay picture" />
-          <img src="images/2.jpg" alt="Emily Kubay picture" />
-          <img src="images/3.jpg" alt="Emily Kubay picture" />
-        </div>
+      <!-- Title Section -->
+      <div class="title-section">
+        <h1>Emily's Artworks</h1>
+        <p>
+          Explore Emily Kubay's vibrant and creative art pieces. Each work is a
+          unique reflection of her imagination and dedication.
+        </p>
+      </div>
 
-        <!-- Right Column: Text -->
-        <!-- test Text -->
-        <div class="art-text">
-          <h2>About Emily's Art</h2>
-          <p>
-            Emily Kubay is a passionate artist who loves to bring her
-            imagination to life through vibrant and creative artwork.
-          </p>
-          <p>
-            Each piece is a testament to her dedication, unique style, and love
-            for colors and shapes.
-          </p>
-          <p>
-            Explore her amazing creations on the left and get inspired by her
-            incredible journey as a young artist.
-          </p>
-        </div>
+      <!-- Art Groups -->
+      <div class="art-group">
+        <img src="images/1.jpg" alt="Artwork 1" />
+        <p>
+          This painting captures the beauty of a sunrise over the Kent
+          countryside, highlighting Emily's use of warm colors and soft brush
+          strokes.
+        </p>
+      </div>
+
+      <div class="art-group">
+        <img src="images/2.jpg" alt="Artwork 2" />
+        <p>
+          Inspired by her love for nature, this piece showcases Emily's unique
+          interpretation of wildflowers using vibrant, bold strokes.
+        </p>
+      </div>
+
+      <div class="art-group">
+        <img src="images/3.jpg" alt="Artwork 3" />
+        <p>
+          A playful and imaginative piece, this artwork blends abstract shapes
+          and bright colors to create a sense of joy and movement.
+        </p>
       </div>
     </div>
   </body>
