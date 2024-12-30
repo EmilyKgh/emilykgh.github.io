@@ -53,46 +53,47 @@
         background-color: #d9effc;
       }
 
-      .links-section {
+      .art-section {
+        display: flex;
+        gap: 20px; /* Space between the two columns */
+      }
+
+      .art-images {
+        flex: 1; /* Occupy 50% of the space */
+      }
+
+      .art-images img {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .art-text {
+        flex: 1; /* Occupy 50% of the space */
         padding: 20px;
         background-color: rgba(240, 250, 255, 0.9);
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .art-text h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #28587b;
+        text-align: center;
         margin-bottom: 20px;
       }
 
-      .links-section h2 {
-        font-size: 2.5rem; /* Large font size */
-        font-weight: 900; /* Bold text */
-        color: #28587b; /* Highlight color */
-        text-align: center; /* Center alignment */
-        margin-bottom: 20px; /* Adds space below the title */
-      }
-
-      .links-section ul {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      .links-section ul li {
-        margin: 15px 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      .links-section ul li a {
-        padding: 15px 20px;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #6fa3ef;
-        border-radius: 12px;
-        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, background-color 0.3s ease;
-      }
-
-      .links-section ul li a:hover {
-        background-color: #a7c7ff;
-        transform: translateY(-5px);
+      .art-text p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 2px solid #28587b; /* Add clear borders */
+        border-radius: 8px; /* Rounded corners for a softer look */
+        background-color: #f0f8ff; /* Light background inside each section */
       }
     </style>
   </head>
@@ -109,13 +110,30 @@
     </div>
 
     <div class="main-content">
-      <div class="links-section">
-        <h2>Artworks</h2>
-        <ul>
-          <li><a href="#">Artwork 1</a></li>
-          <li><a href="#">Artwork 2</a></li>
-          <li><a href="#">Artwork 3</a></li>
-        </ul>
+      <div class="art-section">
+        <!-- Left Column: Images -->
+        <div class="art-images">
+          <img src="images/1.jpg" alt="Emily Kubay picture" />
+          <img src="images/2.jpg" alt="Emily Kubay picture" />
+          <img src="images/3.jpg" alt="Emily Kubay picture" />
+        </div>
+
+        <!-- Right Column: Text -->
+        <div class="art-text">
+          <h2>About Emily's Art</h2>
+          <p>
+            Emily Kubay is a passionate artist who loves to bring her
+            imagination to life through vibrant and creative artwork.
+          </p>
+          <p>
+            Each piece is a testament to her dedication, unique style, and love
+            for colors and shapes.
+          </p>
+          <p>
+            Explore her amazing creations on the left and get inspired by her
+            incredible journey as a young artist.
+          </p>
+        </div>
       </div>
     </div>
   </body>
