@@ -9,29 +9,49 @@
         font-family: Arial, sans-serif;
         margin: 0;
         display: flex;
+        flex-direction: column;
         min-height: 100vh;
       }
 
-      .sidebar {
+      .headbar {
         background-color: #28587b;
         color: white;
-        width: 200px;
-        padding: 20px;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease;
       }
 
-      .sidebar ul {
+      .headbar.hidden {
+        transform: translateY(-100%);
+      }
+
+      .headbar img {
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .headbar ul {
         list-style-type: none;
+        margin: 0;
         padding: 0;
+        display: flex;
+        gap: 25px;
+        flex: 1;
       }
 
-      .sidebar ul li {
-        margin: 15px 0;
+      .headbar ul li {
+        margin: 0;
       }
 
-      .sidebar ul li a {
+      .headbar ul li a {
         display: block;
-        padding: 10px;
+        padding: 12px 18px;
         color: white;
         text-decoration: none;
         font-weight: bold;
@@ -42,9 +62,30 @@
         transition: all 0.3s ease;
       }
 
-      .sidebar ul li a:hover {
+      .headbar ul li a:hover {
         background-color: #5c9ead;
         box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .toggle-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #41729f;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        z-index: 1001;
+      }
+
+      .toggle-button:hover {
+        background-color: #5c9ead;
       }
 
       .main-content {
@@ -62,11 +103,11 @@
       }
 
       .links-section h2 {
-        font-size: 2.5rem; /* Large font size */
-        font-weight: 900; /* Bold text */
-        color: #28587b; /* Highlight color */
-        text-align: center; /* Center alignment */
-        margin-bottom: 20px; /* Adds space below the title */
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #28587b;
+        text-align: center;
+        margin-bottom: 20px;
       }
 
       .links-section ul {
@@ -95,9 +136,17 @@
         transform: translateY(-5px);
       }
     </style>
+    <script>
+      function toggleHeadbar() {
+        const headbar = document.querySelector(".headbar");
+        headbar.classList.toggle("hidden");
+      }
+    </script>
   </head>
   <body>
-    <div class="sidebar">
+    <!-- Headbar -->
+    <div class="headbar">
+      <img src="images/logo.webp" alt="Emily Kubay picture" />
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="piano.html">Piano</a></li>
@@ -105,8 +154,12 @@
         <li><a href="violin.html">Violin</a></li>
         <li><a href="drama.html">Drama</a></li>
         <li><a href="art.html">Art</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
       </ul>
     </div>
+
+    <!-- Toggle Button -->
+    <button class="toggle-button" onclick="toggleHeadbar()">Toggle Menu</button>
 
     <div class="main-content">
       <div class="links-section">

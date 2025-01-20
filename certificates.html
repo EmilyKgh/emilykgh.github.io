@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artworks</title>
+    <title>Certificates</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -17,8 +17,8 @@
         background-color: #28587b;
         color: white;
         display: flex;
-        align-items: center;
-        padding: 15px;
+        align-items: center; /* Vertically center items */
+        padding: 15px; /* Increased padding for a larger headbar */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
@@ -31,9 +31,9 @@
       }
 
       .headbar img {
-        height: 80px;
-        border-radius: 50%;
-        margin-right: 20px;
+        height: 80px; /* Increased logo size */
+        border-radius: 50%; /* Circular logo */
+        margin-right: 20px; /* Space between logo and menu */
       }
 
       .headbar ul {
@@ -41,8 +41,8 @@
         margin: 0;
         padding: 0;
         display: flex;
-        gap: 25px;
-        flex: 1;
+        gap: 25px; /* Increased spacing between menu items */
+        flex: 1; /* Ensures the menu spans the rest of the headbar */
       }
 
       .headbar ul li {
@@ -51,7 +51,7 @@
 
       .headbar ul li a {
         display: block;
-        padding: 12px 18px;
+        padding: 12px 18px; /* Larger menu items */
         color: white;
         text-decoration: none;
         font-weight: bold;
@@ -94,7 +94,7 @@
         background-color: #d9effc;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
       }
 
       .title-section {
@@ -112,38 +112,32 @@
         margin-bottom: 10px;
       }
 
-      .title-section p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #333;
-      }
-
-      .art-group {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        padding: 20px;
+      .certificate-section {
         background-color: #f0f8ff;
+        padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
-      .art-group:nth-child(odd) {
-        flex-direction: row-reverse;
+      .certificate-section h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #28587b;
+        margin-bottom: 20px;
       }
 
-      .art-group img {
-        width: 35%;
+      .certificate-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+        gap: 40px;
+        align-items: center;
+      }
+
+      .certificate-gallery img {
+        width: 100%;
+        height: auto;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      .art-group p {
-        flex: 1;
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #333;
-        margin: 0;
       }
     </style>
     <script>
@@ -169,84 +163,66 @@
     </div>
 
     <!-- Toggle Button -->
-    <button class="toggle-button" onclick="toggleHeadbar()">Toggle Menu</button>
+    <button class="toggle-button" onclick="toggleHeadbar()">menu</button>
 
     <div class="main-content">
       <!-- Title Section -->
       <div class="title-section">
-        <h1>Emily's Artworks</h1>
+        <h1>Certificates</h1>
         <p>
-          Explore Emily Kubay's vibrant and creative art pieces. Each work is a
-          unique reflection of her imagination and dedication.
+          Explore the collection of certificates that Emily has earned for her
+          achievements in music, drama, theory, violin, and competitions.
         </p>
       </div>
 
-      <!-- Art Groups -->
-      <div class="art-group">
-        <img src="images/christmas_drawings.jpg" alt="Artwork 2" />
-        <p>
-          Emily felt jolly because it was Christmas! So she decided to draw lots
-          of Christmas-related things!
-        </p>
+      <!-- Singing Section -->
+      <div class="certificate-section">
+        <h2>Singing</h2>
+        <div class="certificate-gallery">
+          <img src="images/singing1.jpg" alt="Singing Certificate 1" />
+          <img src="images/singing2.jpg" alt="Singing Certificate 2" />
+        </div>
       </div>
 
-      <div class="art-group">
-        <img src="images/cute_dog_corgi.jpg" alt="Artwork 3" />
-        <p>
-          Emily loves dogs, so she decided to draw this cute corgi. She took
-          inspiration from her toy dog called Molly!
-        </p>
+      <!-- Drama Section -->
+      <div class="certificate-section">
+        <h2>Drama</h2>
+        <div class="certificate-gallery">
+          <img src="images/lamda_0.jpg" alt="Drama Certificate 1" />
+          <img src="images/lamda_1.jpg" alt="Drama Certificate 2" />
+          <img src="images/lamda_2.jpg" alt="Drama Certificate 3" />
+          <img src="images/lamda_3.jpg" alt="Drama Certificate 4" />
+          <img src="images/lamda_4.jpg" alt="Drama Certificate 5" />
+          <img src="images/lamda_5.jpeg" alt="Drama Certificate 6" />
+        </div>
       </div>
 
-      <div class="art-group">
-        <img src="images/dog.jpg" alt="Artwork 3" />
-        <p>
-          Following the theme of dogs, Emily wanted to draw a dog that has just
-          been woken up. She wanted to express her feelings when she was woken
-          up!
-        </p>
+      <!-- Theory Section -->
+      <div class="certificate-section">
+        <h2>Theory</h2>
+        <div class="certificate-gallery">
+          <img src="images/violin_2.jpg" alt="Theory Certificate 1" />
+        </div>
       </div>
 
-      <div class="art-group">
-        <img src="images/four_seasons.jpg" alt="Artwork 3" />
-        <p>
-          In this painting, Emily uses dry pastels to draw the different
-          seasons. As you can see, she did the same picture only at different
-          times of the year.
-        </p>
+      <!-- Competitions Section -->
+      <div class="certificate-section">
+        <h2>Competitions</h2>
+        <div class="certificate-gallery">
+          <img
+            src="images/first_prize_comp.jpeg"
+            alt="Competition Certificate 1"
+          />
+          <img src="images/5-6_win_comp.jpg" alt="Competition Certificate 2" />
+        </div>
       </div>
 
-      <div class="art-group">
-        <img src="images/landscape_1.jpg" alt="Artwork 3" />
-        <p>
-          After she came back from a trip, Emily wanted to draw the mountains
-          that she climbed and the beautiful lake that she fished in!
-        </p>
-      </div>
-
-      <div class="art-group">
-        <img src="images/squirrel.jpg" alt="Artwork 3" />
-        <p>
-          After waking up every day to see the squirrels playing in the trees
-          just outside her bedroom window, Emily wanted to draw the squirrels
-          that she saw every morning.
-        </p>
-      </div>
-
-      <div class="art-group">
-        <img src="images/tiger.jpeg" alt="Artwork 3" />
-        <p>
-          After watching a documentary about tigers, Emily wanted to draw the
-          magnificent creature in her sketchbook.
-        </p>
-      </div>
-
-      <div class="art-group">
-        <img src="images/wolf.jpg" alt="Artwork 3" />
-        <p>
-          Emily wanted to surprise her mum with this picture of a wolf because
-          her mum is reading books about wolves. What a surprise it was!
-        </p>
+      <!-- Violin Section -->
+      <div class="certificate-section">
+        <h2>Violin</h2>
+        <div class="certificate-gallery">
+          <img src="images/violin_1.jpg" alt="Violin Certificate 1" />
+        </div>
       </div>
     </div>
   </body>
